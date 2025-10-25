@@ -1,12 +1,14 @@
 import React from 'react'
 import Button from 'react-bootstrap/Button';
 
-const WeatherButton = () => {
+const WeatherButton = ({cities, setCity, cityActive}) => {
+
   return (
-    <div>
-      <Button variant="outline-light">현재 위치</Button>
-      <Button variant="outline-light">파리</Button>
-      <Button variant="outline-light">도쿄</Button>
+    <div className='btn-container'>
+      <Button variant="outline-dark" onClick={() => setCity(null)} active={cityActive === null ? true : false}>Current Location</Button>
+      {cities.map((item, index) => (
+          <Button variant="outline-dark" key={index} onClick={() => setCity(item)} active={item === cityActive ? true : false}>{item}</Button>//react bootstrap 버튼 active를 조작해서 클릭한 상태 표시
+      ))}
     </div>
   )
 }

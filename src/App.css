@@ -15,7 +15,7 @@ body{
 .weather-container{
   width: 400px; 
   background: linear-gradient(135deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.1) 30%);
-  border-radius: 40px;
+  border-radius: 15px;
   border: solid 1px var(--color-gray);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(20px);
@@ -45,6 +45,41 @@ body{
 .weather-img{
   width: 50px;
   height: 50px;
+}
+
+.btn {
+  margin: 5px;
+}
+
+.weather-img, .wind-img{
+  width: 40px;
+  height: 40px;
+}
+
+.weather-btn, .wind-btn{
+  padding: 5px;
+  border: 0px;
+  background-color: rgba(255, 255, 255, 0.5);
+  margin: 5px;
+  border-radius: 10px;
+}
+
+.choice-btn{
+  background-color: rgb(255, 255, 255);
+}
+
+.btn-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: auto;
+  height: auto;
+  background: linear-gradient(135deg, rgb(255, 255, 255), rgba(255, 255, 255, 0.1) 30%);
+  border-radius: 10px;
+  border: solid 1px var(--color-gray);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.65);
 }
 
 @media screen and (max-width: 450px){
