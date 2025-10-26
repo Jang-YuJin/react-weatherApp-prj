@@ -27,6 +27,7 @@ function App() {
   const [err, setErr] = useState('');
 
   const getCurrentLocation = () => { //현재 도시 위치 위경도 찾는 함수
+    setLoading(true);
     navigator.geolocation.getCurrentPosition((position) => {
       let lat = position.coords.latitude;
       let lon = position.coords.longitude;
